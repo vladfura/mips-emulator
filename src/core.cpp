@@ -45,7 +45,7 @@ TlbRecord Core::pageFaultHandle(PageFault pf, VirtAddress va)	{
 	temp.V0 = 1;
 	
 	m_pc = cpo.ePC.address;
-	
+	insertTlbRecord(temp); // запись в TLB
 	return temp;
 }
 
